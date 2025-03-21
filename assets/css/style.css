@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "Lexend Deca";
+    src: url(../fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Big Shoulders";
+    src: url(../fonts/Big_Shoulders/BigShoulders-VariableFont_opsz\,wght.ttf);
+    font-weight: 700;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Big Shoulders";
+    text-transform: uppercase;
+    color: hsl(0, 0%, 95%);
+    font-size: 30px;
+}
+
+p {
+    font-family: "Lexend Deca";
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 150%;
+    margin-bottom: 1vh;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Lexend Deca";
+    
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 100px;
+
+    height: 16vh;
+    width: 120px;
+    padding: 1vh;
+
+    margin-bottom: 25vh;
+    text-align: center;
+    bottom: 50px;
+
+}
+
+#cards {
+    display: flex;
+}
+
+.btn-sedans {
+    color: hsl(31, 77%, 52%);
+}
+
+.btn-suvs {
+    color: hsl(184, 100%, 22%);
+}
+
+.btn-luxury {
+    color: hsl(179, 100%, 13%);
+}
+
+.card {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 30vw;
+    height: 50vh;
+    position: relative;
+    gap: 2%;
+}
+
+.card:first-of-type {
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card:nth-of-type(2) {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.card:nth-of-type(3) {
+    background-color: hsl(179, 100%, 13%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: inherit;
+        height: 50vh;
+    }
+
+    .card:first-of-type {
+        border-bottom-left-radius: inherit;
+        border-top-right-radius: 10px;
+    }
+
+    .card:nth-of-type(3) {
+        border-top-right-radius: inherit;
+        border-bottom-left-radius: 10px;
+    }
+}
